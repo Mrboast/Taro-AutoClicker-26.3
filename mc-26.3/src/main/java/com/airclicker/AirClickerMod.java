@@ -26,10 +26,10 @@ public class AirClickerMod implements ClientModInitializer {
                 Identifier.fromNamespaceAndPath("airclicker", "main"));
 
         toggleKey = KeyMappingHelper.registerKeyMapping(new KeyMapping(
-                "key.airclicker.toggle", InputConstants.Type.KEYSYM, InputConstants.KEY_R, category));
+                "key.airclicker.toggle", InputConstants.Type.KEYBOARD, InputConstants.KEY_R, category));
         menuKey = KeyMappingHelper.registerKeyMapping(new KeyMapping(
-                "key.airclicker.menu", InputConstants.Type.KEYSYM, InputConstants.KEY_RSHIFT, category));
-
+                "key.airclicker.menu", InputConstants.Type.KEYBOARD, InputConstants.KEY_RSHIFT, category));
+        
         ClientTickEvents.END_CLIENT_TICK.register(AirClickerMod::tick);
 
         HudElementRegistry.attachElementAfter(
